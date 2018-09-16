@@ -1,0 +1,5 @@
+function getCookie(name){var v=null;var cookies=document.cookie.split(";");cookies.forEach(function(kv){var k_v=kv.split("=");if(k_v[0].trim()==name){v=k_v[1];}});return v;}
+function setCookie(name,value,options){var str=name+'='+value;var defaults={"domain":'.nauticus.io',"secure":""};if(window.location.hostname==="localhost"){delete defaults["domain"];delete defaults["secure"];}
+for(var i in defaults){str+=";"+i;}
+document.cookie=str;return true;}
+function decodeToken(){let base64Url=getCookie("idToken").split('.')[1];let base64=base64Url.replace('-','+').replace('_','/');return JSON.parse(window.atob(base64));};function getParam(p,url){let a=(url!==undefined)?url.substr(url.indexOf("?")+1):window.location.search.substr(1);a=a.split("&");let found="";a.forEach(function(param){param=param.split("=");if(param[0]===p){found=param[1];}});return(found==="")?false:(found===undefined)?true:found;}

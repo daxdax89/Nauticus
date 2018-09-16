@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+<script>
+
+    firebase.initializeApp({
+        apiKey: "AIzaSyCE-es3WO9G_peuVrY4VzRiBrHrpKRgCdw",
+        authDomain: "nauticus-platform.firebaseapp.com",
+        databaseURL: "https://nauticus-platform.firebaseio.com",
+        projectId: "nauticus-platform",
+        storageBucket: "nauticus-platform.appspot.com",
+        messagingSenderId: "1040677885790"
+    });
+    console.debug("Firebase initialized.");
+</script>
+<script>
+
+    setTimeout(function(){
+        firebase.auth().signOut();
+        document.cookie = 'idToken=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    },100);
+
+
+
+</script>
+<head>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NCSQWQX');</script>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Nauticus SignIn</title>
+
+<link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="css/animate.css" rel="stylesheet">
+
+<link href="css/style.css" rel="stylesheet">
+
+<link href="css/colors/blue.css" id="theme" rel="stylesheet">
+
+<link href="css/signs.css" rel="stylesheet">
+
+
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<script>
+
+    </script>
+</head>
+<body>
+
+<div class="preloader">
+<svg class="circular" viewBox="25 25 50 50">
+<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+</svg>
+</div>
+<section id="wrapper" class="login-register">
+<div class="login-box login-sidebar">
+<div class="white-box">
+<form class="form-horizontal form-material" id="loginform" action="javascript:void(0)">
+<a href="index.html" class=" db"><img src="https://storage.googleapis.com/assets-nauticus-platform/nauticus_logo_full_white.png" alt="Home" style="max-width:172px" /><br /></a>
+<div class="form-group" style="padding-top:30%">
+<div class="col-md-9 col-md-offset-1 col-sm-12">
+<input class="form-control" type="text" required="" placeholder="EXAMPLE@EXAMPLE.COM" id="email">
+</div>
+</div>
+<div class="form-group">
+<div class="col-md-9 col-md-offset-1 col-sm-12">
+<input class="form-control" type="password" required="" placeholder="PASSWORD" id="password">
+</div>
+</div>
+<div class="form-group">
+<div class="col-md-9 col-md-offset-1 col-sm-12">
+<a href="javascript:void(0)" id="to-recover" class="text-dark pull-right">FORGOT PASSWORD</a></div>
+</div>
+<div class="form-group text-center m-t-20">
+<div class="col-md-9 col-md-offset-1 col-sm-12">
+<button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light custom" type="submit" id="signInButton">Log In
+</button>
+</div>
+</div>
+<div class="form-group m-b-0">
+<div class="col-sm-12 text-center" id="signUpLink">
+<p>DON&#39;T HAVE AN ACCOUNT ?<a href="signup.html" class="text-primary m-l-5" style="color:white"><b>SIGN UP</b></a>
+</p>
+</div>
+</div>
+<div class="form-group text-center m-t-20" id="signInProgress" style="display: none;">
+<div class="col-xs-12">
+<div class="progress progress-md">
+<div class="progress-bar progress-bar-info active progress-bar-striped" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%" role="progressbar" id=""></div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
+<div class="social">
+<a href="javascript:void(0)" class="btn  btn-facebook" data-toggle="tooltip" title="Login with Facebook" id="facebookButton"> <i aria-hidden="true" class="fa fa-facebook"></i> </a> <a id="twitterButton" href="javascript:void(0)" class="btn btn-twitter" data-toggle="tooltip" style="width: 34px" title="Login with Twitter"> <i aria-hidden="true" class="fa fa-twitter"></i> </a>
+</div>
+</div>
+</div>
+</form>
+<form class="form-horizontal" id="recoverform" action="index.html">
+<div class="form-group ">
+<div class="col-xs-12">
+<h3 style="color:white">Recover Password</h3>
+<p class="text-muted">Enter your Email and instructions will be sent to you!</p>
+</div>
+</div>
+<div class="form-group ">
+<div class="col-xs-12">
+<input class="form-control" type="text" required="" placeholder="iforgot@myemail.com" id="resetEmail">
+</div>
+</div>
+<div class="form-group text-center m-t-20">
+<div class="col-xs-12">
+<button class="btn btn-primary btn-lg btn-block text-uppercase waves-effect waves-light" type="button" id="resetButton">Reset
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</section>
+
+<script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
+
+<script src="bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script src="plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
+
+<script src="js/jquery.slimscroll.js"></script>
+
+<script src="js/waves.js"></script>
+
+<script src="js/custom.js"></script>
+
+<script src="plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
+<script src="front_trans_locales/zh.json"></script>
+<script src="front_trans_locales/en.json"></script>
+
+<script src="js/signin.js"></script>
+
+<script src="js/util.js"></script>
+<script src="js/dashboard_sigin.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+{
+  "dash_index_1": "多少BTC",
+  "dash_index_2": "多少ETH",
+  "dash_index_3": "多少BCH",
+  "dash_index_4": "多少",
+
+  "dash_form_warn1": "最大核准小数点是15位",
+  "dash_form_warn2": "NTS的最低购买额度是500平台币, 最大额度是10,000,000平台币",
+  "dash_form_warn3": "最小购买额度是500!",
+  "dash_form_warn4": "最大购买额度是100,000,000",
+  "dash_form_warn5": "最大小数点位是2位",
+  "dash_form_warn6": "NTS的最低购买额度是500平台币, 最大额度是10,000,000平台币",
+
+  "dash_form_swal_thank": "谢谢您的购买！",
+  "dash_form_swal_warn1": "您选择的价格已失效!",
+  "dash_form_swal_warn2": "此交易付款代码已经被使用!",
+  "dash_form_swal_warn3": "购买出错, 请稍后重试！",
+  "dash_form_swal_warn4": "您选择的价格已失效!",
+  "dash_form_swal_warn5": "更新资料失败，请联系诺提卡斯!",
+  "dash_form_swal_warn6": "关于获取地址出现了一些错误，请稍后再试。",
+  "dash_form_swal_warn7": "购买过程中出现了一些错误，请联系诺提卡斯：support@nauticus.io",
+  "dash_form_swal_warn8": "获取汇率中出现了一些错误，请稍后再试。",
+
+  "dash_form_warn7": "输入了无效的支付代码，请核实。",
+  "dash_form_warn8": "此数值不是一个64位或者66位的，请检查。",
+  "dash_form_warn9": "输入为空, 请检查输入",
+  "dash_form_warn10": "此数值不是一个64位或者66位的，请检查。",
+  "dash_form_warn11": "输入为空, 请检查输入",
+
+  "signin_warn1": "无效邮箱",
+  "signin_warn2": "您的帐户已被禁用，请联系我们。",
+  "signin_warn3": "您的帐户不存在",
+  "signin_warn4": "无效的密码",
+  "signin_warn5": "缺少电子邮箱地址和/或密码",
+  "signin_warn6": "通用错误",
+  "signin_warn7": "脸书登录失败，请尝试其他方式来登录或注册。",
+  "signin_warn8": "无法用脸书登录，你有其他账号吗？",
+  "signin_warn9": "推特登录失败，请尝试其他方式来登录或注册。",
+  "signin_warn10": "推特登录失败，请尝试其他方式来登录或注册。",
+  "signin_signin": "登录",
+
+  "reset_text1": "发送中",
+  "reset_text2": "查看您的邮箱",
+  "reset_text3": "重置",
+  "reset_text4": "无效的邮箱地址",
+
+  "trans_1": "没找到匹配的记录"
+}

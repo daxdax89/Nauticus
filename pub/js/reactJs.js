@@ -1,0 +1,2 @@
+function Button(){return<button id="btn"class="fab fa-telegram-plane"></button>;}
+ReactDOM.render(Button(),document.getElementById('bottom_telegram'),function(){$('#btn').click(function(){window.open('https://t.me/nauticusblockchain');});});

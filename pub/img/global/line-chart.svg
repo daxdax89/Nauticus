@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 464 464" style="enable-background:new 0 0 464 464;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#3BACFB;}
+	.st1{fill:url(#SVGID_1_);}
+	.st2{fill:url(#SVGID_2_);}
+	.st3{fill:url(#SVGID_3_);}
+	.st4{fill:url(#SVGID_4_);}
+	.st5{fill:url(#SVGID_5_);}
+	.st6{fill:url(#SVGID_6_);}
+</style>
+<g>
+	<circle class="st0" cx="40" cy="328" r="32"/>
+	<circle class="st0" cx="424" cy="136" r="32"/>
+	<circle class="st0" cx="168" cy="200" r="32"/>
+	<circle class="st0" cx="264" cy="296" r="32"/>
+</g>
+<g>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0" y1="232" x2="464" y2="232">
+		<stop  offset="0" style="stop-color:#023B92"/>
+		<stop  offset="1" style="stop-color:#0189C1"/>
+	</linearGradient>
+	<path class="st1" d="M431.2,64.8C428,46.4,411.2,32,392,32H72c-22.4,0-40,17.6-40,40v184.8c-18.4,4-32,20-32,39.2
+		s13.6,35.2,32,39.2V392c0,22.4,17.6,40,40,40h320c22.4,0,40-17.6,40-40V143.2c18.4-4,32-20,32-39.2S449.6,68,431.2,64.8z M72,48
+		h320c11.2,0,20,7.2,23.2,16.8c-17.6,4.8-31.2,20-31.2,39.2c0,8,2.4,16,6.4,22.4l-104,104c-6.4-4-14.4-6.4-22.4-6.4
+		s-16,2.4-22.4,6.4l-40.8-40.8c4.8-5.6,7.2-13.6,7.2-21.6c0-22.4-17.6-40-40-40s-40,17.6-40,40c0,8,2.4,16,6.4,22.4l-72.8,72.8
+		c-4-2.4-8.8-4.8-14.4-5.6V72C48,58.4,58.4,48,72,48z M264,240c13.6,0,24,10.4,24,24s-10.4,24-24,24s-24-10.4-24-24
+		S250.4,240,264,240z M144,168c0-13.6,10.4-24,24-24s24,10.4,24,24s-10.4,24-24,24S144,181.6,144,168z M16,296c0-13.6,10.4-24,24-24
+		s24,10.4,24,24s-10.4,24-24,24S16,309.6,16,296z M400,414.4V200c0-4.8-3.2-8-8-8s-8,3.2-8,8v216h-48V264c0-4.8-3.2-8-8-8
+		s-8,3.2-8,8v152h-16v-88c0-4.8-3.2-8-8-8s-8,3.2-8,8v88h-16v-88c0-4.8-3.2-8-8-8s-8,3.2-8,8v88h-48V296c0-4.8-3.2-8-8-8s-8,3.2-8,8
+		v120h-16V232c0-4.8-3.2-8-8-8s-8,3.2-8,8v184h-48V296c0-4.8-3.2-8-8-8s-8,3.2-8,8v120H72c-13.6,0-24-10.4-24-24v-56.8
+		c18.4-4,32-20,32-39.2c0-8-2.4-16-6.4-22.4l72.8-72.8c5.6,4.8,13.6,7.2,21.6,7.2s16-2.4,22.4-6.4l40.8,40.8
+		C226.4,248,224,256,224,264c0,22.4,17.6,40,40,40s40-17.6,40-40c0-8-2.4-16-6.4-22.4l104.8-104.8c4,2.4,8.8,4.8,14.4,5.6V392
+		C416,402.4,409.6,411.2,400,414.4z M424,128c-13.6,0-24-10.4-24-24s10.4-24,24-24s24,10.4,24,24S437.6,128,424,128z"/>
+	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="128" y1="360" x2="144" y2="360">
+		<stop  offset="0" style="stop-color:#023B92"/>
+		<stop  offset="1" style="stop-color:#0189C1"/>
+	</linearGradient>
+	<path class="st2" d="M136,320c-4.8,0-8,3.2-8,8v64c0,4.8,3.2,8,8,8s8-3.2,8-8v-64C144,323.2,140.8,320,136,320z"/>
+	<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="128" y1="280" x2="144" y2="280">
+		<stop  offset="0" style="stop-color:#023B92"/>
+		<stop  offset="1" style="stop-color:#0189C1"/>
+	</linearGradient>
+	<path class="st3" d="M136,256c-4.8,0-8,3.2-8,8v32c0,4.8,3.2,8,8,8s8-3.2,8-8v-32C144,259.2,140.8,256,136,256z"/>
+	<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="224" y1="360" x2="240" y2="360">
+		<stop  offset="0" style="stop-color:#023B92"/>
+		<stop  offset="1" style="stop-color:#0189C1"/>
+	</linearGradient>
+	<path class="st4" d="M232,320c-4.8,0-8,3.2-8,8v64c0,4.8,3.2,8,8,8s8-3.2,8-8v-64C240,323.2,236.8,320,232,320z"/>
+	<linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="352" y1="312" x2="368" y2="312">
+		<stop  offset="0" style="stop-color:#023B92"/>
+		<stop  offset="1" style="stop-color:#0189C1"/>
+	</linearGradient>
+	<path class="st5" d="M360,224c-4.8,0-8,3.2-8,8v160c0,4.8,3.2,8,8,8s8-3.2,8-8V232C368,227.2,364.8,224,360,224z"/>
+	<linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="64" y1="376" x2="80" y2="376">
+		<stop  offset="0" style="stop-color:#023B92"/>
+		<stop  offset="1" style="stop-color:#0189C1"/>
+	</linearGradient>
+	<path class="st6" d="M72,352c-4.8,0-8,3.2-8,8v32c0,4.8,3.2,8,8,8s8-3.2,8-8v-32C80,355.2,76.8,352,72,352z"/>
+</g>
+</svg>

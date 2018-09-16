@@ -1,0 +1,46 @@
+{
+  "dash_index_1": "How much BTC?",
+  "dash_index_2": "How much ETH?",
+  "dash_index_3": "How much BCH?",
+  "dash_index_4": "How much ",
+
+  "dash_form_warn1": "The input decimal number should less than 15",
+  "dash_form_warn2": "The minimum NTS purchase is 500 tokens and the maximum purchase is 10,000,000 tokens",
+  "dash_form_warn3": "The purshase NTS should more than 500!",
+  "dash_form_warn4": "The purshase amount should less than 10,000,000!",
+  "dash_form_warn5": "The purshase NTS should more than 500!",
+  "dash_form_warn6": "The minimum NTS purchase is 500 tokens and the maximum purchase is 10,000,000 tokens",
+
+  "dash_form_swal_thank": "Thank you for purchasing!",
+  "dash_form_swal_warn1": "Your rates selected has already expired!",
+  "dash_form_swal_warn2": "This transaction payment code has already been used!",
+  "dash_form_swal_warn3": "There are some errors when purchasing!",
+  "dash_form_swal_warn4": "Your rates selected has already expired!",
+  "dash_form_swal_warn5": "Updating profile fail, Please contact Nautica support!",
+  "dash_form_swal_warn6": "There are some errors about getting address, please try later!",
+  "dash_form_swal_warn7": "There are some errors during purchasing!\nplease contact Nauticus support: support@nauticus.io!",
+  "dash_form_swal_warn8": "There is a error of getting rates, please try later!",
+
+  "dash_form_warn7": "The input hash payment code is not valid, please check it.",
+  "dash_form_warn8": "The value is not 64 bits or 66 bits. Please check below.",
+  "dash_form_warn9": "You have empty input value, please check below",
+  "dash_form_warn10": "The value is not 64 bits or 66 bits. Please check below.",
+  "dash_form_warn11": "You have empty input value, please check below",
+
+  "signin_warn1": "You presented an invalid email",
+  "signin_warn2": "Your account has been disabled, contact support",
+  "signin_warn3": "You don't exist, sorry about that",
+  "signin_warn4": "Invalid password",
+  "signin_warn5": "Missing email and/or password",
+  "signin_warn6": "Generic error",
+  "signin_signin": "SIGN IN",
+
+  "reset_text1": "SENDING",
+  "reset_text2": "CHECK YOUR EMAIL",
+  "reset_text3": "RESET",
+  "reset_text4": "Invalid email",
+
+  "trans_1": "No data found"
+
+}
+

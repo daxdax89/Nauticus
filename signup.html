@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+<script>
+
+    firebase.initializeApp({
+        apiKey: "AIzaSyCE-es3WO9G_peuVrY4VzRiBrHrpKRgCdw",
+        authDomain: "nauticus-platform.firebaseapp.com",
+        databaseURL: "https://nauticus-platform.firebaseio.com",
+        projectId: "nauticus-platform",
+        storageBucket: "nauticus-platform.appspot.com",
+        messagingSenderId: "1040677885790"
+    });
+    console.debug("Firebase initialized.");
+</script>
+<head>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NCSQWQX');</script>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Nauticus Signup</title>
+
+<script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
+
+<link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="css/animate.css" rel="stylesheet">
+
+<link href="css/style.css" rel="stylesheet">
+
+<link href="css/colors/blue.css" id="theme" rel="stylesheet">
+<link href="css/signs.css" rel="stylesheet">
+
+
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<script src="js/signin.js"></script>
+</head>
+<body>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCSQWQX"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+<div class="preloader">
+<svg class="circular" viewBox="25 25 50 50">
+<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+</svg>
+</div>
+<section id="wrapper" class="login-register">
+<div class="login-box login-sidebar" style="overflow-y: scroll">
+<div class="white-box">
+<form class="form-horizontal form-material" id="loginform">
+<a href="index.html" class=" db"><img src="https://storage.googleapis.com/assets-nauticus-platform/nauticus_logo_full_white.png" alt="Home" style="max-width:172px; margin-bottom:0%" /><br /></a>
+<div class="form-group text-center m-t-20">
+<div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
+<div class="social">
+<a href="javascript:void(0)" class="btn  btn-facebook" title="Login with Facebook" id="facebookButton">
+<i aria-hidden="true" class="fa fa-facebook"></i>
+</a>
+<a id="twitterButton" href="javascript:void(0)" class="btn btn-twitter" title="Login with Twitter" style="width: 34px;">
+<i aria-hidden="true" class="fa fa-twitter"></i>
+</a>
+</div>
+</div>
+</div>
+
+<ul class="list-icons m-t-20" id="emailWarning" style="display: none;">
+<li><i class="fa fa-chevron-right text-danger"></i>invalid email address</li>
+</ul>
+<div class="form-group">
+<div class="col-xs-12">
+<input class="form-control" type="text" required="" placeholder="EXAMPLE@EXAMPLE.COM" id="email">
+</div>
+</div>
+
+<ul class="list-icons" id="passwordWarning" style="display: none;">
+<li><i class="fa fa-chevron-right text-danger"></i>passwords don&#39;t match</li>
+</ul>
+<div class="form-group">
+<div class="col-xs-12">
+<input class="form-control" type="password" required="" id="password" placeholder="CREATE PASSWORD (6 CHARS)">
+</div>
+</div>
+<div class="form-group">
+<div class="col-xs-12">
+<input class="form-control" type="password" required="" id="confirmPassword" placeholder="CONFIRM PASSWORD">
+ </div>
+</div>
+
+<ul class="list-icons" id="nameWarning" style="display:none">
+<li><i class="fa fa-chevron-right text-danger"></i>something wrong with names</li>
+</ul>
+<div class="form-group">
+<div class="col-xs-6">
+<input class="form-control" type="text" required="" placeholder="First name" id="fname">
+</div>
+<div class="col-xs-6">
+<input class="form-control" type="text" required="" placeholder="LAST" id="lname">
+</div>
+</div>
+<div class="form-group">
+<div class="col-xs-12">
+<select class="form-control form-control-lg" id="country" style="background-color:#2a4796">
+</select>
+</div>
+</div>
+
+<ul class="list-icons" id="checkboxWarning" style="display:none">
+<li><i class="fa fa-chevron-right text-danger"></i>signup_warnning4</li>
+</ul>
+<div class="policy_blc ">
+<h5 style="color: #fff">NAUTICUS TERMS AND CONDITIONS</h5>
+<p class="policy_content">
+<br>
+Section 1. Acceptance
+<ul>
+<li class="nonDot">
+1.1 The terms and conditions of use stated below (&#39;Terms and Conditions&#39;)constitute a legally binding agreement between you and Nautica Group PTY Limited (“Nauticus”,“we” or “us”).
+</li>
+<li class="nonDot">
+1.2 By using this website (“Site”) and any services provided by Nauticus (“Services”), you agree to accept and comply with the Terms and Conditions.
+</li>
+<li class="nonDot">
+1.3 As used herein, a reference to Nauticus refers to its owners, directors, investors,employees or other related parties.
+</li>
+<li class="nonDot">
+1.4 All information and products listed on this Site is in reference to plans and future direction of Nauticus&#39;s business and is not a confirmation of ready to use product, nor is it a guarantee of release in the future.
+</li>
+<li class="nonDot">
+1.5 By using the Site and/or Services, you accept and understand that Nauticus may charge certain fees for transactions made through the Site and/or Services (“Commission”).Section 2. Risks and Limitations.
+</li>
+<li class="nonDot">
+2.1 The trading of digital and fiat currencies involves significant risk. Prices can and do fluctuate on any given day and are inherently unstable. Due to such price fluctuations,you may increase or lose value in your assets at any given moment. There is an inherent risk that losses may be experienced through buying, selling, or trading anything on the market. By using the Site and/or Services, you acknowledge, accept and assume all such risks.
+</li>
+<li class="nonDot">
+2.2 Cryptocurrencies are not backed by any government or physical commodities; instead they are unique “fiat” currencies backed by technology and trust.You should carefullyassess whether your financial situation and tolerance for risk is suitable for buying,selling or trading Cryptocurrency.
+</li>
+<li class="nonDot">
+2.3 We use our banking providers in order to receive client moneys and making payments. Our banking providers DO NOT transfer, exchange, or provide any services in connection with Cryptocurrencies.
+</li>
+<li class="nonDot">
+2.4 Nauticus Coin is NOT a stock or any other investment instrument or security and should not be under any circumstances be considered as such. The Nauticus Coins(“Nauticus Coin Token” or “Token”) on offer have not been registered with any government, legal entity, or registry. Nauticus Coin is NOT a share, stake, debt,security, or equivalent right, and does not confer to hits holder any rights to future profits, shares, intellectual property or receiving of future revenue of Nauticus.Nauticus Coin does NOT represent any voting or governance rights to the development,operations, ownership, and decision process of Nauticus.
+</li>
+<li class="nonDot">
+2.5 Nauticus have the right to restrict, ban or suspend transactions made on the Site or with Nauticus should there be any suspicions of illegal activity or a breach of the Terms andConditions.
+</li>
+</ul>
+<br>
+Section 3. Limited Rights of Use3.1 Unless otherwise specified, all materials on this Site are the property of Nauticus and are protected by copyright, trademark and other applicable laws. You are permitted to view, download, print a copy of the materials from this solely for your personal, informational, non-commercial use, provided you keep intact all copyright and other proprietary notices.
+<ul>
+<li class="nonDot">
+3.2 Trademarks, video, logos, and service marks, software, audio, data, trades, prices, text, charts, graphs, images, graphics and any other material appearing on the Site are all the property of Nauticus unless otherwise specified, in which case such material belong to their respective rights holders. These materials should under nocircumstances be copied, modified, posted, republished, reproduced, collected, distributed, uploaded, transmitted, scraped, or collected by any means and in any form, manual or automated, unless specifically approved by Nauticus.
+</li>
+<li class="nonDot">
+3.3 The use of any such materials listed in Section 3 on any other website or networked computer environment for any other purpose is strictly prohibited; any such actions which violate Nauticus’s copyright, trademarks and other applicable and relevant rights is a breach of these Terms and Conditions and may be subject to legal action.
+</li>
+</ul>
+<br>
+Section 4. Maintaining Your Account
+<ul>
+<li class="nonDot">
+4.1 By registering an account on the Site (“Account”), you agree to provide Nauticus with accurate, current, and complete information about yourself as instructed through theSite’s registration process, and be responsible for keeping this information updated at all times.
+</li>
+<li class="nonDot">
+4.2 You agree that you will not use any Account other than your own, fraudulently impersonate or access the Account of any other user at any time, or assist others in obtaining unauthorized access. The creation or use of Accounts without obtaining the prior express permission from Nauticus will result in the immediate suspension of all said Accounts, as well as all pending purchase/sale offers. Attempting to do the above mentioned or assisting others, or the distribution of instructions, software or tools for that purpose, will result in the Accounts of such persons being terminated.
+</li>
+<li class="nonDot">
+4.3 Should you be in breach of above Terms and Conditions in 4.1, Nauticus may elect to take further action against you after termination of your account.
+</li>
+<li class="nonDot">
+4.4 You are responsible for your Account information and its confidentiality, including:safeguarding your Bitcoins, your password, financial information,personal information and contact details, and for all activity including transactions conducted or posted to your Account.
+</li>
+<li class="nonDot">
+4.5 We may request additional information from you, including authenticating documents if we deem there to be suspicious activity on your Account.
+</li>
+<li class="nonDot">
+4.6 Any transactionsthat have been deemed suspicious will be frozen pending our review process.
+</li>
+<li class="nonDot">
+4.7 By using Nauticus’s Site and its Services, you accept that you must comply with any requests pursuant to these Terms and Condition, or be subject to suspension or termination of your Account.
+</li>
+<li class="nonDot">
+4.8 If your account has been subjected to unauthorized access, account, password, or anyother security breaches, you are required to notify Nauticus immediately.
+</li>
+<li class="nonDot">
+4.9 You agree that you will not use the Site or Services to perform criminal activity of any sort, including but not limited to, money laundering, illegal gambling operations,terrorist financing, or malicious hacking.
+</li>
+<li class="nonDot">
+4.10 By creating an Account, you also consent to receiving electronic communications from Nauticus. These communications may include notices about your Account and are part of your relationship with us.
+</li>
+<li class="nonDot">
+4.11 We may also send you promotional communications via email, including, but not limited to, special offers, surveys, newsletters and other news and information Nauticus believes to be of interest to you. You may opt out of receiving these promotional emails at any time by following the unsubscribe instructions provided there in.
+</li>
+</ul>
+<br>
+Section 5. Termination
+<ul>
+<li class="nonDot">
+5.1 You have the right to terminate your relationship with Nauticus, and close yourAccount at any time, subjected to the settlement of transactions pending on yourAccount.
+</li>
+ <li class="nonDot">
+5.2 You agree that Nauticus may, by giving notice, in its sole discretion terminate your account and all access to Nauticus’s Sites. Nauticus may also:
+</li>
+<li class="nonDot">5.2.1 terminate, limit or suspend the service of your account,</li>
+<li class="nonDot">5.2.2 prohibit access to the Site and its content,</li>
+<li class="nonDot">5.2.3 delay or remove hosted content, services, tools, and</li>
+<li class="nonDot">
+5.2.4 take all technical and legal steps we deemnecessary to restrict you from the Site, should we suspect you are breaching the agreement set out in these Terms and Conditions.</li>
+</ul>
+<ul>
+<li class="nonDot">
+5.3 Additionally, we may, in appropriate circumstances and at our discretion, suspend or terminate your Account for any reason, including without limitation:
+</li>
+<li class="nonDot">5.3.1 failure to pay or fraudulent payment for transactions,</li>
+<li class="nonDot">
+5.3.2 attempting to gain unauthorized access to the Site or another user&#39;s account or providing assistance to others&#39; attempting to do so,
+</li>
+<li class="nonDot">
+5.3.3 usage of the Services to perform illegal activities such as money laundering,illegal gambling operations, financing terrorism, or other criminal activities,
+</li>
+<li class="nonDot">5.3.4 overcoming software security features limiting use of or protecting any content,</li>
+<li class="nonDot">5.3.5 violations of these Terms and Conditions,</li>
+<li class="nonDot">5.3.6 unexpected operational difficulties, or</li>
+<li class="nonDot">
+5.3.7 upon the request of law enforcement or other government agencies, if deemed tobe legitimate and compelling by Nauticus, acting in its sole discretion.
+</li>
+<li class="nonDot">
+5.4 Nauticus also reserves the right to cancel/terminate unverified Accounts which have been inactive for over 6 months or to discontinue providing service for such Accounts.
+</li>
+<li class="nonDot">
+5.5 You agree that Nauticus will not be liable to you or to any third party for termination of your Account or access to the Site. The suspension of an Account shall not affect the payment of the commissions due to Nauticus for past transactions. Upon termination, you must provide details for a valid bank account to allow for the transfer of any currencies credited to your account.
+</li>
+<li class="nonDot">
+5.6 Termination of your Account does not prejudice or in any way limit any rights of Nauticus accruing during your use of the Site or Services, including any rights contained in these Terms and Conditions.
+</li>
+</ul>
+<br>
+Section 6. Limitation of Liability and warranties
+<ul>
+<li class="nonDot">
+6.1 Any and all purchases of Nauticus Coins on Nauticus Sites by any users are final and non-refundable. By completing a purchase of Nauticus Coins, you acknowledge that neither Nauticus nor any of its affiliated Sites are required to provide a refund for any reason, and that you will not receive money or other compensation for any Nauticus Token that is not used or remains unused for any reason.
+</li>
+<li class="nonDot">
+ 6.2 All services are provided without warranty of any kind, either express or implied. Nauticus do not represent that this Site will be available 100% of the time to meet your needs. We will strive to provide You with the Service as soon as possible but there are no guarantees that access will not be interrupted, or that there will be no delays, failures, errors, omissions or loss of transmitted information.
+</li>
+<li class="nonDot">
+6.3 All Nauticus Coins and Nauticus’s Site are provided “as is” and does not include any representation or warranties of any kind, exposed or implied. As a user, You will accept responsibility for all risks regarding the use of the Site and the purchase and use of Nauticus Coin Tokens.
+</li>
+<li class="nonDot">
+6.4 We will use reasonable endeavours to ensure that the Site can normally be accessed by You in accordance with these Terms and Conditions. We may suspend use of the Site for maintenance and will make reasonable efforts to give you notice. You acknowledge that this may not be possible in an emergency.
+</li>
+<li class="nonDot">
+6.5 If Nauticus is unable to perform the Services outlined in the Terms and Conditions due to factors beyond our control including but not limited to an event of Force Majeure, change of law or change in sanctions policy we will not have any liability to you with respect to the Services provided under this agreement and for a time period coincident with the event.
+</li>
+<li class="nonDot">
+6.6 To the extent permitted by law, Nauticus or its Owners will not be held liable or accountable to you for any damages, loss of profit, loss of revenue, loss of business, loss of opportunity, loss of data, or any indirect or consequential loss resulting from the following:
+<ul>
+<li class="nonDot">
+6.6.1 your use of purchased Nauticus Coins, inability to use, availability, or unavailability of Site materials, information, software, services, content, and facilities,
+</li>
+<li class="nonDot">6.6.2 change in value of Nauticus Coins or any other currencies, crypto or fiat,</li>
+<li class="nonDot">
+6.6.3 ability, inability, availability, or unavailability to buy, sell or transfer Nauticus Coins or the availability and existence of the exchange platform prior or after the ICO Token sales,
+</li>
+<li class="nonDot">
+6.6.4 illegal or unauthorized use of the Site or purchase and sale of Tokens in an unauthorized manner, or
+</li>
+<li class="nonDot">6.6.5 the product failing to be suitable for the use you have intended it to be used for.</li>
+</ul>
+</li>
+<li class="nonDot">
+6.7 Nothing in these Terms and Conditions excludes or limits the liability of either party for fraud, negligence, breach of terms implied by operation of law, or any other liability which may not by law be limited or excluded. Subject to the foregoing, Nauticus’s aggregate liability in respect of claims based on events arising out of or in connection with your use of the Site and/or Services, whether in contract or tort (including negligence) or otherwise, shall in no circumstances exceed the greater of either:
+</li>
+<li class="nonDot">
+6.7.1 the total amount held in your Account less any amount of Commission that maybe due and payable in respect of such Account; or6.7.2 the amount of the transaction(s) that are the subject of the claim less any amount of Commission that may be due and payable in respect of such transaction(s).
+</li>
+<li class="nonDot"></li>
+</ul>
+<br>
+Section 7. Legal, Financial or Other Professional Advice
+<ul>
+<li class="nonDot">
+7.1 The provision by Nauticus of the Services should in no way be considered legal,financial or any other kind of specialized or expert advice. By using the Site and/orServices, you confirm that:
+<ul>
+<li>
+you have sufficient knowledge, understanding and sophistication to evaluate therisks and merits associated with Blockchain, token sales, and/or token management and offerings and to competently use our Services,
+</li>
+<li>
+you represent and warrant that you have sought, or have had the opportunity to seek any legal, financial or otherwise specialized advice from an expert qualified to provide such counsel to make the most informed decisions, and
+</li>
+<li>
+ you understand that Nauticus gives no warranty regarding the suitability of ourServices and assume no fiduciary duties to you.
+</li>
+</ul>
+</li>
+<li class="nonDot">
+7.2 You represent and warrant that you understand that any recommendations or commentary made by Nauticus or its employees or other users should be considered as general in nature, and you should use your own judgment or seek the advice of an expert before taking any action regardless of such statement. We give no assurance as to the accuracy or completeness of any such statement.
+</li>
+<li class="nonDot" style="font-weight: bold">
+7.3 THIS IS NOT A FINANCIAL PRODUCT. THIS IS NOT IN ANY WAY OR FORM A MANAGED INVESTMENT SCHEME OR FINANCIAL SERVICE. IT IS A SOFTWARE PRODUCT CREATED FOR THE BENEFIT OF THE TRADING AND RETAIL COMMUNITY. NAUTICUS COINS ARE PURLEY A METHOD OF CONDUCTING TRANSACTIONS ON THE NAUTICUS PLATFORM.THEY SHOULD NOT BE SWAPPED FOR OTHER ITEMS OF VALUE ON THE BELIEF, ASSUMPTION OR POSSIBILITY THAT THEY MAY INCREASE IN VALUE. YOU ARE SOLEY RESPONSIBLE OF THE MANAGEMENT OF YOUR CRYPTOCURRENCIES.
+</li>
+</ul>
+<br><br>
+Section 8. Indemnity To the full extent permitted by applicable law, you hereby agree to indemnify Nauticus, and its partners against any action, liability, cost, claim, loss, damage, proceeding or expense suffered or incurred whether directly or indirectly arising from your use of Nauticus Sites and/or Services, or from your violation of these Terms and Conditions.
+<br><br>
+Section 9. Damages Caused by Vulnerabilities Inherent in the Internet or in Blockchain
+<ul>
+<li class="nonDot">
+9.1 Use of the internet may not be secure. You agree that Nauticus is not responsible whatsoever for any damages caused by the interception, loss or alteration to any information sent over the internet.
+</li>
+<li class="nonDot">
+9.2 Nauticus takes security very seriously, and takes all reasonable steps to ensure the highest security and privacy of information transmitted between the Site, Nauticus audits affiliates, and will take reasonable steps to ensure the security and privacy of any information transmitted during your use of our Services, however under no circumstances should such information be assumed as being “confidential”or free from interception or interference from a third party.
+</li>
+<li class="nonDot">
+9.3 Nauticus takes every reasonable precaution to prevent and mitigate cyber attacks. However, these problems still may occur from time to time for reasons that are out of our control. If Nauticus believes its Site or Services have been compromised or under attack, Nauticus reserves the right to immediately suspend all Services provided through the Site for the protection of its users and Nauticus.
+</li>
+<li class="nonDot">
+9.4 If it is determined that such an attack caused an associated Token to rapidly lose value or otherwise cause or threaten to cause damage to the Site, or other users, Nauticus may immediately discontinue all activity regarding to such Token entirely at its discretion. Resolution concerning deposits, withdrawals, Account balances, Services or other disputes related to an attacked Token will be determined on a case-by-case basis.
+</li>
+<li class="nonDot">
+9.5 Nauticus does not make any representation and does not warrant the safety of the Site and is not liable for any lost value or stolen property from the Site or during communications, regardless of whether Nauticus was negligent in providing appropriate security.
+</li>
+<li class="nonDot"></li>
+</ul>
+<br><br>
+Section 10. Governing Law and Jurisdiction These Terms and Conditions and your relationship with Nauticus are governed by the law in the state of Victoria and the Commonwealth of Australia and by using the Site and/or Services, you submit to the non-exclusive jurisdiction of the courts of the state of Victoria and the Commonwealth of Australia in relation to said use of the Site and/or Services.
+<br><br>
+Section 11. Modification of Terms and Conditions Nauticus reserves the right to change, add or remove portions of these Terms and Conditions, at any time, at its sole discretion. After the posting of a notice of changes to the Terms and Conditions,your continued use of the Site will signify that you accept, understand, and agree to comply with the updated Terms and Conditions for all subsequent transactions.
+<br><br>
+PRIVACY POLICY Nautica Group PTY Limited (we, us, Nauticus) works together with banks and financial institutions that are required by law to take steps to prevent illegal activities such as fraud,money-laundering and terrorist-financing. Given the nature of our business, we take the privacy and security of an individual’s personal information very seriously.We are bound by the provisions of the privacy laws in the State of Victoria, Australia and theAustralian Privacy Principles. These laws govern the way in which we may collect, use and disclose personal information about any individual (you, your, user). This Privacy Policy sets out the manner in which we comply with our obligations under these laws. Please read the following information carefully to understand Nauticus practices regarding your information and how we will use it.By continuing to use our website (Site), you acknowledge that you have read, understood,accept, and comply with this document. If you do not agree with any of the information described in this document, you should not access the Site.
+<br>
+Section 1. Collection, use, processing and disclosure of your informationWe collect personal information from customers for identity verification purposes under anti-money laundering and fraud prevention laws.We will use and disclose this personal information insofar as necessary to comply with the law or to confirm your identity and the use of integrated identity verification service.When you visit our website, even without creating an Account with us, we will collect the following information which is sent to us by your computer, mobile device, phone, or any other device. The information collected includes: your IP address, mobile network information, standard web information and device information.This information is collected to allow Nauticus to provide sounds administration and identify users located in jurisdictions where Nauticus Coin sale is restricted or not permitted according to our policies, as well as to monitor usage, data trend analysis, activity, and to personalize our Site accordingly. Information collected may also be supplied to third parties with aggregated and anonymized statistical information about user activity and analysis.When you access the Site or use our products or services, we may place cookies on your computer or device. This technology is used to recognize you as a user of Nauticus’s services and to further assist with monitoring usage of our Site.There are also a number of limited circumstances in which we may collect personal information directly from you. This is limited to circumstances where you make direct contact with us by telephone or in writing, or via one of Nauticus’s Sites. The information collected in this manner will be used only for the purpose of communicating with you or otherwise in accordance with the purpose for which you provided your personal information.
+<br>
+Section 2. The personal information we collectThe type of personal information which we might collect from customers includes your name, current and previous addresses, date of birth, telephone number, driver licence number,passport number and any other information that may be relevant to serve the purpose of fully verifying your identity. We require our third-party providers and corporate customers to comply with all relevant privacy and data protection laws (including, where necessary,obtaining the appropriate express or implied consent from you at the time your personal information is collected) in order for such information to be lawfully used for identity verification and related purposes.We do not collect, use or disclose any sensitive information about any person. This includes a person’s racial or ethnic origin, political opinion, political association, religious belief or affiliation, philosophical belief, professional or trade union or association, sexual preference,criminal record or health information.We do not use or adopt as our own identifier any individual identifier assigned by any other organization.
+<br>
+Section 3. Use of cookies Nauticus uses cookies or other similar technologies for the purpose of enhancing user experience while using the Site. We use the following cookies:
+<ul>
+<li>
+Strictly necessary cookies: Cookies that are required for the full and proper functionality of the Site;
+</li>
+<li>
+Analytical or Performance cookies: Cookies that allow us to recognize and count thenumber of users that are using our Site and how they move around while they are using it. This information is used to aid us with providing better ways to improve theSite. We use a variety of analytic tools to help us analyse how users engage our website which compiles reports that help identify ways to improve the Site. There ports that are disclosed only indicate trends, and do not provide and individual details of our visitors. If you feel the need to do so, you may opt out of our analytics at any time;
+</li>
+<li>
+Authentication cookies: Cookies used for user authentication, confirming identity and proper access to Site information; and
+</li>
+<li>Functionality cookies: Used to recognize you when returning to the Site.</li>
+</ul>
+<br>
+Section 4. Use of Log Files. Nauticus may use the log files to collect your Internet protocol (IP) addresses, type of browser, Internet Service Provider (ISP), date/time stamp, referring/exit pages, and number of clicks to analyze your activity on the Site, collect geographic and demographic information, and evaluate content of the Nauticus’s Site.Information collected from log files is not personally identifiable.Nauticus is not obligated to use log files and may do it at its own discretion. If you wish, you may control the use of cookies from your browser by manually deactivating this feature via your browser settings. However, blocking or disabling some cookies may result in the failureof Sites functions resulting in negative experience.Nauticus is not obligated to place cookies on your computer and may do it at its own discretion.
+<br>
+Security<br>
+We take all reasonable steps (including the employment of appropriate security systems and procedures) to ensure all data held by us is safe and secure. Such security measures include but not limited to physical protection and electronic encryption to prevent any unauthorized access, authentication cookies, multilayered Site access protocol.
+<br>
+Quality
+<br>
+We take all reasonable steps to ensure that any personal information that we collect and use is accurate, complete and up-to-date. We may, under our discretion or required by law, require updates of your personal information periodically, this includes but not limited to your phone, address, email, passport, drivers license, and other relevant verification documents. Nauticus will insure sufficient time is provided for you to supply the information, however you understand and accept that depending on circumstances, we may request it with little allotted timeframe. In either case, we are not liable or held accountable for your availability to provide these information, nor are we liable for any loss you may incur.
+<br>
+Access and correction
+<br>
+You have a right to access your personal information, subject to some exceptions allowed by law. If you wish to access your personal information, you should contact us via the Nauticus Support page. We reserve the right to charge a fee for searching for and providing access to your information.
+<br>
+Destruction
+<br>
+Where we determine, acting reasonably, that personal information held in respect of an individual is no longer needed for our functions or the services we provide, we will permanently destroy or de-identify that information.
+<br>
+Amendments to the policy
+<br>
+We may from time to time vary this Privacy Policy. Please check our website regularly for an up-to-date version of our Privacy Policy.
+<br>
+</p>
+<div class="col-md-12 tick_policy_blc">
+<div class="checkbox checkbox-primary pull-left p-t-0">
+<input id="checkbox-tc" type="checkbox">
+<label for="checkbox-tc">
+<p>I have read and understood the Nauticus ICO Agreement, Privacy Policy and Terms and Conditions and I consent to receive communications from Nauticus.</p>
+</label>
+</div>
+</div>
+</div>
+<div class="form-group text-center m-t-20 form-group">
+<div class="col-xs-12">
+<button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" id="signUpButton" type="button">
+Sign Up
+</button>
+</div>
+</div>
+<div class="form-group text-center m-t-20">
+<div class="col-xs-12">
+<div class="progress progress-lg" id="signUpProgress" style="display: none;">
+<div class="progress-bar progress-bar-info active progress-bar-striped" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%" role="progressbar"></div>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</section>
+
+<script src="bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script src="plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
+
+<script src="js/jquery.slimscroll.js"></script>
+
+<script src="js/waves.js"></script>
+
+<script src="js/custom.js"></script>
+
+<script src="plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
+
+<script src="js/signin.js"></script>
+
+<script src="js/util.js"></script>
+
+<script>
+
+    $( document ).ready(function(){
+        (getCookie("locale") == 'zh') ? ($('#lname').hide()) : ($('#lname').show());
+    })
+
+    let signup = function(){
+
+        ["email","password","name","checkbox"].forEach(function(w){
+            $(`#${w}Warning`).css("display","none");
+        })
+
+
+        function showWarning(warning,msg){
+            $(`#${warning}Warning`).css("display","block").html(`<li><i class="fa fa-chevron-right text-danger"></i><span class='text-danger'>${msg}</span></li>`);
+        }
+
+        let valid = {
+            status:true,
+            reasons:[]
+        }
+        //check terms
+        let terms = ["tc"];
+        terms.forEach(function(term){
+            //check that each term box has been ticked.
+            if(!document.getElementById("checkbox-"+term).checked){
+                valid.status = false;
+                showWarning("checkbox","Our terms must be accepted.")
+            }
+        });
+
+        //check fields
+        //check password confirmations
+        if($("#confirmPassword").val() !== $("#password").val()){
+            valid.status = false;
+            showWarning("password","Passwords must match");
+        }
+
+        if($("#password").val().length < 6){
+            showWarning("password","Password must be at least 6 characters");
+            valid.status = false;
+        }
+
+        if(getCookie("locale") == 'zh'){
+            if($("#fname").val() === ""){
+                showWarning("name","You need to fill in your first and last name.");
+                valid.status = false;
+            }
+        }else{
+            if($("#fname").val() === "" || $("#lname").val() === ""){
+                showWarning("name","You need to fill in your first and last name.");
+                valid.status = false;
+            }
+        }
+
+
+        function validateEmail(){
+            try{
+                let e = $("#email").val().split("@");
+                let e2 = e[1].split(".");
+                return (e2.length === 2 || e2.length === 3 && e.length === 2);
+            }
+            catch(err){
+                return false;
+            }
+
+
+        }
+
+        if($("#email").val() === "" || !validateEmail()){
+            showWarning("email","need a valid email");
+            valid.status = false;
+        }
+
+
+
+        if(!valid.status){
+            $("#signUpButton").addClass("btn-warning").removeClass("btn-info").text("Fix the errors above");
+            setTimeout(function(){
+                $("#signUpButton").addClass("btn-info").removeClass("btn-warning").text("SIGN UP");
+            },2000);
+
+
+        }
+        else{
+            $("#signInProgress").css("display","block");
+            $("#signUpButton").text("PLEASE WAIT");
+
+            $.post("https://auth.nauticus.io/sign/up",{
+                firstname:$("#fname").val(),
+                lastname:$("#lname").val(),
+                email:$("#email").val(),
+                password:$("#password").val(),
+                country:$("#country").val().split(" ")[0]
+            }).done(function(response){
+                if(response.success){
+                    firebase.auth().signInWithCustomToken(response.token).then(function(){
+                        firebase.auth().currentUser.getIdToken(true).then(idToken => {
+                            setCookie("continue","https://nauticus.io/home");
+                            setCookie("idToken",idToken);
+                            /*firebase.auth().currentUser.sendEmailVerification().then(function(){
+                                console.log("sent verification email");
+                                window.location.replace("/complete");
+                            });*/
+
+                            $.post("https://auth.nauticus.io/verify",{idToken:idToken}).success(function(){
+                                console.debug("requested verification");
+                                window.location.replace("/complete");
+                            });
+                        })
+                    })
+                }
+                else{
+                    if(response.err === "auth/email-already-exists"){
+                        $("#signUpButton").addClass("btn-warning").removeClass("btn-info").text("Email already registered.").delay(2000).removeClass("btn-danger").addClass("btn-info");
+                        $("#signUpProgress").css("display","none");
+
+                    }
+                    else{
+                        $("#signUpButton").addClass("btn-warning").removeClass("btn-info").text("Error, invalid details.").delay(2000).removeClass("btn-danger").addClass("btn-info");
+                        $("#signUpProgress").css("display","none");
+                    }
+                }
+            }).fail(function(res){
+                if(res.responseJSON.err === "auth/email-already-exists"){
+                    $("#signUpButton").addClass("btn-warning").removeClass("btn-info").text("Email already registered.").delay(2000).removeClass("btn-danger").addClass("btn-info");
+                    $("#signUpProgress").css("display","none");
+
+                }
+                else{
+                    $("#signUpButton").addClass("btn-warning").removeClass("btn-info").text("Error, invalid details.").delay(2000).removeClass("btn-danger").addClass("btn-info");
+                    $("#signUpProgress").css("display","none");
+                }
+            })
+        }
+
+    };
+
+    /*$("#facebookButton").click(function(){
+        facebookLogin();
+    });
+
+    $("#twitterButton").click(function(){
+        twitterLogin();
+    })*/
+
+
+
+    //obtain countries to populate dropdow
+    function populateCountries(){
+        $.ajax({
+            method:"GET",
+            url:"https://data.nauticus.io/countries",
+            success:function(countries){
+                // console.log(countries);
+                Object.keys(countries).forEach(function(c){
+
+                    $("#country").append(`<option>${c} - ${countries[c]}</option>`);
+                });
+                autoSelectCountry();
+            }
+        });
+    }
+
+
+    function autoSelectCountry(){
+        $.get("https://data.nauticus.io/locale",function (data) {
+            $("#country").val(`${data.country["alpha-3"]} - ${data.country.name}`);
+        })
+    }
+
+    populateCountries();
+
+    $("#signUpButton").click(function(){
+        signup();
+    })
+</script>
+</body>
+</html>

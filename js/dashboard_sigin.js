@@ -1,0 +1,4 @@
+function getCookie2(name){var v=null;var cookies=document.cookie.split(";");cookies.forEach(function(kv){var k_v=kv.split("=");if(k_v[0].trim()==name){v=k_v[1];}});return v;}
+var getDashReset_cookie=getCookie2('DashReset');if(getDashReset_cookie!=null){$("#loginform").slideUp();$("#recoverform").fadeIn();setTimeout(function(){var location="."+window.location.hostname;document.cookie='DashReset=;expires=Thu, 01 Jan 1970 00:00:01 GMT';document.cookie='DashReset=;expires=Thu, 01 Jan 1970 00:00:01 GMT;domain='+location;document.cookie='DashReset=;expires=Thu, 01 Jan 1970 00:00:01 GMT;domain='+window.location.hostname;},2000)}
+$('body').on('keydown','input',function(e){var self=$(this),form=self.parents('form:eq(0)'),focusable,next;if(e.keyCode==13){focusable=form.find('input,button[type=submit]').filter(':visible');next=focusable.eq(focusable.index(this)+1);if(next.length){next.focus();}else{form.submit();}
+return false;}});
